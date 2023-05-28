@@ -15,10 +15,9 @@ import java.io.IOException
 class Login : AppCompatActivity() {
     companion object {
         const val USERNAME = "name"
-        const val USERCAR = "car"
     }
     data class Req(var username: String?, var password: String?)
-    data class Res(var success: Boolean?, var username: String?, var carName: String?)
+    data class Res(var success: Boolean?, var username: String?)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -51,11 +50,9 @@ class Login : AppCompatActivity() {
                         val res = response.body!!.string()
                         val data = Gson().fromJson(res, Res::class.java)
                         if (data.success == true) {
-                            val intent =
-                                Intent(applicationContext, MainActivity::class.java).apply {
-                                    putExtra(USERNAME, data.username)
-                                    putExtra(USERCAR, data.carName)
-                                }
+                            val intent = Intent(applicationContext, MainActivity::class.java).apply{
+                                putExtra(USERNAME, data.username)
+                            }
                             startActivity(intent)
                         } else {
                             runOnUiThread {
