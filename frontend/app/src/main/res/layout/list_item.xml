@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp">
-
-    <TextView
-        android:id="@+id/textViewPart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp">
 
     <ImageView
         android:id="@+id/imageViewPart"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPart"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scaleType="fitStart" />
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewPart"/>
 
     <TextView
-        android:id="@+id/textViewDamageInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/textViewDamage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPart"/>
 
     <TextView
-        android:id="@+id/textViewRepairMethod"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/textViewMethod"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDamage" />
 
     <TextView
-        android:id="@+id/textViewRepairCost"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/textViewCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMethod" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2172 @@
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+[2023-05-30 06:00:14,254] ERROR in app: Exception on /api/main [POST]
+Traceback (most recent call last):
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "api.py", line 245, in main
+    data["origImage"] = img_to_s3(origImage)
+TypeError: img_to_s3() missing 1 required positional argument: 'filename'
+127.0.0.1 - - [30/May/2023 06:00:14] "[35m[1mPOST /api/main HTTP/1.1[0m" 500 -
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+[2023-05-30 06:05:35,640] ERROR in app: Exception on /api/main [POST]
+Traceback (most recent call last):
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "api.py", line 248, in main
+    data["origImage"] = img_to_s3(origImage, "origImage"+timestamp)
+TypeError: can only concatenate str (not "float") to str
+127.0.0.1 - - [30/May/2023 06:05:35] "[35m[1mPOST /api/main HTTP/1.1[0m" 500 -
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+[2023-05-30 06:07:25,192] ERROR in app: Exception on /api/main [POST]
+Traceback (most recent call last):
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "api.py", line 248, in main
+    data["origImage"] = img_to_s3(origImage, "origImage"+timestamp)
+TypeError: can only concatenate str (not "int") to str
+127.0.0.1 - - [30/May/2023 06:07:25] "[35m[1mPOST /api/main HTTP/1.1[0m" 500 -
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 64.6ms
+Speed: 5.1ms pre-process, 64.6ms inference, 37.0ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:08:53] "POST /api/main HTTP/1.1" 200 -
+Credentials not available
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Credentials not available
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Credentials not available
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Credentials not available
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 57.0ms
+Speed: 3.2ms pre-process, 57.0ms inference, 13.6ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:20:55] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 203.4ms
+Speed: 13.9ms pre-process, 203.4ms inference, 4.0ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:22:15] "POST /api/main HTTP/1.1" 200 -
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 56.2ms
+Speed: 2.4ms pre-process, 56.2ms inference, 5.1ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:28:17] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 82.7ms
+Speed: 74.4ms pre-process, 82.7ms inference, 4.3ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:39:52] "POST /api/main HTTP/1.1" 200 -
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 59.2ms
+Speed: 4.1ms pre-process, 59.2ms inference, 27.6ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:46:59] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 49.6ms
+Speed: 156.3ms pre-process, 49.6ms inference, 4.8ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 06:57:21] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 310.7ms
+Speed: 2.9ms pre-process, 310.7ms inference, 3.7ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:00:32] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 199.3ms
+Speed: 3.5ms pre-process, 199.3ms inference, 8.5ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:00:59] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 191.3ms
+Speed: 70.8ms pre-process, 191.3ms inference, 2.8ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:01:14] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 11.6ms
+Speed: 282.4ms pre-process, 11.6ms inference, 1.9ms postprocess per image at shape (1, 3, 640, 640)
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:02:35] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 212.4ms
+Speed: 15.3ms pre-process, 212.4ms inference, 3.1ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:06:03] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 132.1ms
+Speed: 72.4ms pre-process, 132.1ms inference, 5.5ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:06:15] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 20.1ms
+Speed: 159.8ms pre-process, 20.1ms inference, 2.3ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:10:27] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 218.9ms
+Speed: 8.6ms pre-process, 218.9ms inference, 2.3ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:10:35] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 77.5ms
+Speed: 36.0ms pre-process, 77.5ms inference, 7.4ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:11:25] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 173.7ms
+Speed: 7.8ms pre-process, 173.7ms inference, 11.5ms postprocess per image at shape (1, 3, 640, 640)
+
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:12:37] "POST /api/main HTTP/1.1" 200 -
+
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 25.6ms
+Speed: 11.1ms pre-process, 25.6ms inference, 81.7ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:17:12] "POST /api/main HTTP/1.1" 200 -
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.192.16:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 25.7ms
+Speed: 1.4ms pre-process, 25.7ms inference, 7.1ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:20:35] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 234.6ms
+Speed: 11.1ms pre-process, 234.6ms inference, 2.7ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:21:39] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 148.8ms
+Speed: 3.7ms pre-process, 148.8ms inference, 22.8ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:22:08] "POST /api/main HTTP/1.1" 200 -
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 183.7ms
+Speed: 4.1ms pre-process, 183.7ms inference, 2.1ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 07:22:54] "POST /api/main HTTP/1.1" 200 -
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
+Upload Successful
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Upload Successful
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------

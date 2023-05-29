@@ -20,9 +20,12 @@ import albumentations as A
 import torch.nn.functional as F
 from io import BytesIO
 import base64
+import boto3
+from botocore.exceptions import NoCredentialsError
 
 import os
 import json
+import time
 from datetime import datetime
 
 INPUT_PATH = '../input/'
@@ -193,19 +196,46 @@ def str_to_img(str):
     img = Image.open(img)
     return img
 
-def img_to_str(img):
+def img_to_s3(img, filename):
+    s3 = boto3.client('s3')
+    bucket_name = 'sca-app-storage'
+
     img_buffer = BytesIO()
     img.save(img_buffer, format="PNG")
-    img_str = base64.b64encode(img_buffer.getvalue()).decode('utf8')
-    
-    return img_str
+    img_buffer.seek(0)
 
-def skimage_to_str(img):
+    try:
+        s3.upload_fileobj(img_buffer, bucket_name, filename)
+        print("Upload Successful")
+        url = f"https://{bucket_name}.s3.amazonaws.com/{filename}"
+        return url
+    except FileNotFoundError:
+        print("The file was not found")
+        return None
+    except NoCredentialsError:
+        print("Credentials not available")
+        return None
+
+def skimage_to_s3(img, filename):
     pill_img = Image.fromarray(skimage.img_as_ubyte(img))
     img_buffer = BytesIO()
     pill_img.save(img_buffer, format="PNG")
-    img_str = base64.b64encode(img_buffer.getvalue()).decode('utf8')
-    return img_str
+    img_buffer.seek(0)
+    
+    s3 = boto3.client('s3')
+    bucket_name = 'sca-app-storage'
+
+    try:
+        s3.upload_fileobj(img_buffer, bucket_name, filename)
+        print("Upload Successful")
+        url = f"https://{bucket_name}.s3.amazonaws.com/{filename}"
+        return url
+    except FileNotFoundError:
+        print("The file was not found")
+        return None
+    except NoCredentialsError:
+        print("Credentials not available")
+        return None
 
 @app.route('/api/main', methods=['POST'])
 def main():
@@ -220,9 +250,11 @@ def main():
         repairday = int(datetime.today().strftime("%Y%m%d"))
         company = data["company"]
         
+        timestamp = str(int(time.time()))
+        
         data={}
         
-        data["origImage"] = img_to_str(origImage)
+        data["origImage"] = img_to_s3(origImage, "origImage"+"_"+timestamp+".png")
         
         #part_prediction
         parts, part_coor, conf = make_part_predictions(model, origImage)
@@ -239,13 +271,14 @@ def main():
             part_img = Image.new(crop.mode, (256,256), (255, 255, 255))
             part_img.paste(crop, (int((256-width)/2), int((256-height)/2)))
             dict["part"] = parts[i]
-            dict["part_img"]= img_to_str(part_img)
+            dict["part_img"]= img_to_s3(part_img, parts[i]+"_"+timestamp+".png")
             
             damage_mask, val, sum, count = make_damage_predictions(model1, model2, model3, model4, part_img)
             dict["damage_mask"]=[]
             
             for j in range(4):
-                dict['damage_mask'].append(skimage_to_str(damage_drawMask(part_img, color.label2rgb(damage_mask[j][:,:,0]))))
+                dict['damage_mask'].append(skimage_to_s3(damage_drawMask(part_img, color.label2rgb(damage_mask[j][:,:,0])), 'damage_mask_'+parts[i]+'_' +timestamp+'_'+str(j)+'.png'))
+
 
             dict['damage_info']=[]
             dict['checkbox_info']={}
@@ -255,13 +288,11 @@ def main():
                     print(labels[j]+": Damage is not detected")
                     dict['damage_info'].append(labels[j]+": Not detected")
                     dict['checkbox_info'][parts[i]+'_'+labels[j]+'_disable']=True
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_color']="grey"
                 else: 
                     print(labels[j]+": "+str(val[i])+"% area")
                     print(labels[j] + " confidence score: "+ str(round((sum[j]/count[j]) * 100, 1)) + "%")
                     dict['damage_info'].append(labels[j] + ": Detected, Confidence score: "+ str(round((sum[j]/count[j]) * 100, 1)) + "%")
                     dict['checkbox_info'][parts[i]+'_'+labels[j]+'_disable']=False
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_color']="green"
                 print("")
             
             repair_method = get_repair_method(repair_method_model, part_img)
@@ -281,101 +312,6 @@ def main():
         response = jsonify(data)
         response.headers.add("Access-Control-Allow-Origin", "*")
         response.headers['Content-Type'] = 'application/json'
-        return response
-
-@app.route('/api/test', methods=['POST'])
-def test():
-    response = Response()
-    if request.method == 'POST':
-        response.headers.add("Access-Control-Allow-Origin", "*")
-        data = request.get_json()
-        
-        firstday = 20170101
-        repairday = int(datetime.today().strftime("%Y%m%d"))
-        company = "현대"
-        
-        idx = int(data["index"])
-        data={}
-        
-        #load original mask
-        coco = COCO('../testset/datainfo/testset_info.json')
-        img_ids = coco.getImgIds()
-        image_id = int(img_ids[idx])
-        image_infos = coco.loadImgs(image_id)[0]
-        images = cv2.imread(os.path.join('../testset/img/', image_infos['file_name']))
-        images = cv2.cvtColor(images, cv2.COLOR_BGR2RGB)
-        ann_ids = coco.getAnnIds(imgIds=image_infos['id'])
-        anns = coco.loadAnns(ann_ids)
-        masks = np.zeros((image_infos["height"], image_infos["width"]))
-        for ann in anns:
-            pixel_value = ann['category_id'] + 1
-            masks = np.maximum(coco.annToMask(ann) * pixel_value, masks)
-        resize = A.Compose([A.Resize(width=256, height=256)])
-        transformed = resize(image = images, mask=masks)
-        origMask = transformed["mask"]
-
-        #load original image
-        origImage = Image.open(os.path.join('../testset/img/', image_infos['file_name']))
-        origImage = origImage.resize((256, 256))
-        
-        data["origImage"] = img_to_str(origImage)
-        data["origMask"] = skimage_to_str(damage_drawMask(origImage, color.label2rgb(origMask)))
-        
-        #part_prediction
-        parts, part_coor, conf = make_part_predictions(model, origImage)
-        print("Damaged Parts: "+', '.join(parts))
-        data["part"] = parts
-
-        data["info"] = []
-        
-        for i in range(len(parts)):
-            dict={}
-            print("\nDetecting damage in "+parts[i]+"...\n")
-            crop = origImage.crop(part_coor[i])
-            width, height = crop.size
-            part_img = Image.new(crop.mode, (256,256), (255, 255, 255))
-            part_img.paste(crop, (int((256-width)/2), int((256-height)/2)))
-            dict["part"] = parts[i]
-            dict["part_img"]= img_to_str(part_img)
-            
-            damage_mask, val, sum, count = make_damage_predictions(model1, model2, model3, model4, part_img)
-            dict["damage_mask"]=[]
-            
-            for j in range(4):
-                dict['damage_mask'].append(skimage_to_str(damage_drawMask(part_img, color.label2rgb(damage_mask[j][:,:,0]))))
-
-            dict['damage_info']=[]
-            dict['checkbox_info']={}
-            labels = ['Breakage', 'Crushed', 'Scratched', 'Separated']
-            for j in range(4):
-                if val[j] is None: 
-                    print(labels[j]+": Damage is not detected")
-                    dict['damage_info'].append(labels[j]+": Not detected")
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_disable']=True
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_color']="grey"
-                else: 
-                    print(labels[j]+": "+str(val[i])+"% area")
-                    print(labels[j] + " confidence score: "+ str(round((sum[j]/count[j]) * 100, 1)) + "%")
-                    dict['damage_info'].append(labels[j] + ": Detected, Confidence score: "+ str(round((sum[j]/count[j]) * 100, 1)) + "%")
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_disable']=False
-                    dict['checkbox_info'][parts[i]+'_'+labels[j]+'_color']="green"
-                print("")
-            
-            repair_method = get_repair_method(repair_method_model, part_img)
-            print(parts[i]+" repair method is "+ repair_method)
-            dict['repair_method'] = repair_method
-            
-            modelinput, repair_cost = Utils_GradientBoosting.get_model_input(firstday, repairday, company, parts[i], repair_method)
-            repair_cost += repair_cost_model.predict([modelinput])[0]
-            repair_cost = int(round(repair_cost, -3))
-            print(parts[i]+" repair cost is "+ str(repair_cost)+ " won")
-            dict['repair_cost'] = str(repair_cost)
-
-            print("\n"+"-"*40)
-            
-            data['info'].append(dict)
-
-        response.set_data(json.dumps(data))
         return response
 
 def load_part_yolo_model(weight_path):

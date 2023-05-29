@@ -12,11 +12,13 @@ import android.util.JsonReader
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import com.google.gson.Gson
+import com.squareup.picasso.Picasso
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.MediaType.Companion.toMediaType
@@ -31,72 +33,14 @@ object ImageHolder {
     var imgBitmap: Bitmap? = null
 }
 
-fun base64ToBitmap(b64: String): Bitmap {
-    val imageBytes = Base64.decode(b64, Base64.DEFAULT)
-    return BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
-}
-class DamageInfoAdapter(private val context: Context, private val dataSource: List<Report.DamageInfo>) : BaseAdapter() {
-
-    private val inflater: LayoutInflater
-        get() = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-
-    override fun getCount(): Int = dataSource.size
-
-    override fun getItem(position: Int): Any = dataSource[position]
-
-    override fun getItemId(position: Int): Long = position.toLong()
-
-    @SuppressLint("SetTextI18n")
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val view: View
-        val holder: ViewHolder
-
-        if (convertView == null) {
-            view = inflater.inflate(R.layout.list_item, parent, false)
-            holder = ViewHolder()
-            holder.tvPart = view.findViewById(R.id.textViewPart)
-            holder.imgPart = view.findViewById(R.id.imageViewPart)
-            holder.tvDamageInfo = view.findViewById(R.id.textViewDamageInfo)
-            holder.tvRepairMethod = view.findViewById(R.id.textViewRepairMethod)
-            holder.tvRepairCost = view.findViewById(R.id.textViewRepairCost)
-            view.tag = holder
-        } else {
-            view = convertView
-            holder = convertView.tag as ViewHolder
-        }
-
-        val damageInfo = getItem(position) as Report.DamageInfo
-
-        holder.tvPart.text = "Part: ${damageInfo.part}"
-        holder.imgPart.setImageBitmap(base64ToBitmap(damageInfo.part_img)) // base64ToBitmap 함수는 별도로 구현해야 함
-        holder.tvDamageInfo.text = "Damage Info: ${damageInfo.damage_info.joinToString(", ")}"
-        holder.tvRepairMethod.text = "Repair Method: ${damageInfo.repair_method}"
-        holder.tvRepairCost.text = "Repair Cost: ${damageInfo.repair_cost}"
-
-        return view
-    }
-
-    private class ViewHolder {
-        lateinit var tvPart: TextView
-        lateinit var imgPart: ImageView
-        lateinit var tvDamageInfo: TextView
-        lateinit var tvRepairMethod: TextView
-        lateinit var tvRepairCost: TextView
-    }
-}
-
 class Report : AppCompatActivity() {
     data class Req(var img_string: String?, var firstday: String?, var company: String?)
-    data class CheckboxInfo(
-        val disable: Boolean,
-        val color: String
-    )
     data class DamageInfo(
         val part: String,
         val part_img: String,
         val damage_mask: List<String>,
         val damage_info: List<String>,
-        val checkbox_info: Map<String, CheckboxInfo>,
+        val checkbox_info: Map<String, Boolean>,
         val repair_method: String,
         val repair_cost: String
     )
@@ -105,6 +49,35 @@ class Report : AppCompatActivity() {
         val part: List<String>,
         val info: List<DamageInfo>
     )
+    class DamageInfoAdapter(private val context: Context, private val damageInfoList: List<DamageInfo>) :
+        ArrayAdapter<DamageInfo>(context, 0, damageInfoList) {
+        @SuppressLint("SetTextI18n")
+        override fun getView(i: Int, cvtView: View?, parent: ViewGroup): View {
+            var view = cvtView
+            if (view == null){
+                view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
+            }
+
+            val currentDamageInfo = damageInfoList[i]
+
+            val partTextView = view!!.findViewById(R.id.textViewPart) as TextView
+            partTextView.text = currentDamageInfo.part
+
+            val partImgView = view.findViewById(R.id.imageViewPart) as ImageView
+            Picasso.get().load(currentDamageInfo.part_img).into(partImgView)
+
+            val damageInfoTextView = view.findViewById(R.id.textViewDamage) as TextView
+            damageInfoTextView.text = currentDamageInfo.damage_info.joinToString("\n")
+
+            val repairMethodTextView = view.findViewById(R.id.textViewMethod) as TextView
+            repairMethodTextView.text = "Repair method: "+ currentDamageInfo.repair_method
+
+            val repairCostTextView = view.findViewById(R.id.textViewCost) as TextView
+            repairCostTextView.text = "Cost: "+currentDamageInfo.repair_cost
+
+            return view
+        }
+    }
     fun bitmapToBase64(bitmap: Bitmap): String {
         val byteArrayOutputStream = ByteArrayOutputStream()
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
