@@ -25,6 +25,8 @@ class Login : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar?.hide()
 
+        val url = "http://3.38.151.134:8000"
+
         val editTextId = findViewById<EditText>(R.id.editTextId)
         val editTextPwd = findViewById<EditText>(R.id.editTextPwd)
 
@@ -36,7 +38,7 @@ class Login : AppCompatActivity() {
             val json = Gson().toJson(Req(username, password))
 
             val request = Request.Builder()
-                .url("http://3.35.138.28:8000/login")
+                .url("$url/login")
                 .post(json.toString().toRequestBody("application/json; charset=utf-8".toMediaType()))
                 .addHeader("Content-type", "application/json")
                 .build()

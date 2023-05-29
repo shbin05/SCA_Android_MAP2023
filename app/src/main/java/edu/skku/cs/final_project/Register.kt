@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isInvisible
@@ -16,7 +17,7 @@ import java.io.IOException
 
 class Register : AppCompatActivity() {
     data class Config(val username: String?)
-    data class Req(var username: String?, var password: String?, var carName: String?, var carYear: String?)
+    data class Req(var username: String?, var password: String?, var carName: String?, var company: String?, var carYear: String?)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -24,12 +25,15 @@ class Register : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar?.hide()
 
+        val url = "http://3.38.151.134:8000"
+
         val editTextUsername = findViewById<TextView>(R.id.editTextUsername)
         val editTextPwd = findViewById<TextView>(R.id.editTextPwd)
         val editTextConfig = findViewById<TextView>(R.id.editTextConfig)
 
-        val editTextCarName = findViewById<TextView>(R.id.editTextCarName)
-        val editTextCarYear = findViewById<TextView>(R.id.editTextCarYear)
+        val editTextCarName = findViewById<EditText>(R.id.editTextCarName)
+        val editTextCompany = findViewById<EditText>(R.id.editTextCompany)
+        val editTextCarYear = findViewById<EditText>(R.id.editTextCarYear)
 
         val textViewConfig = findViewById<TextView>(R.id.textViewConfig)
         textViewConfig.visibility = TextView.INVISIBLE
@@ -42,7 +46,7 @@ class Register : AppCompatActivity() {
             val json = Gson().toJson(Config(username))
 
             val request = Request.Builder()
-                .url("http://3.35.138.28:8000/config")
+                .url("$url/config")
                 .post(json.toString().toRequestBody("application/json; charset=utf-8".toMediaType()))
                 .addHeader("Content-type", "application/json")
                 .build()
@@ -82,6 +86,7 @@ class Register : AppCompatActivity() {
             val config = editTextConfig.text.toString()
 
             val carName = editTextCarName.text.toString()
+            val company = editTextCompany.text.toString()
             val carYear = editTextCarYear.text.toString()
 
             if(!configTF){
@@ -91,9 +96,9 @@ class Register : AppCompatActivity() {
                 Toast.makeText(applicationContext, "비밀번호를 확인해주세요 !", Toast.LENGTH_SHORT).show()
             }
             else{
-                val json = Gson().toJson(Req(username, password, carName, carYear))
+                val json = Gson().toJson(Req(username, password, carName, company, carYear))
                 val request = Request.Builder()
-                    .url("http://3.35.138.28:8000/register")
+                    .url("$url/register")
                     .post(json.toString().toRequestBody("application/json; charset=utf-8".toMediaType()))
                     .addHeader("Content-type", "application/json")
                     .build()
