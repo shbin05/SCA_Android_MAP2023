@@ -1,0 +1,11 @@
+flask
+flask_cors
+torch
+segmentation_models_pytorch
+opencv-python
+scipy
+pycocotools
+albumentations
+ultralytics
+scikit-learn
+joblib

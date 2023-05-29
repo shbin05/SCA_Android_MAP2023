@@ -1,0 +1,88 @@
+Loading models...
+ * Serving Flask app 'api'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.198.8:8000
+[33mPress CTRL+C to quit[0m
+Ultralytics YOLOv8.0.32 🚀 Python-3.8.0 torch-1.13.1+cu117 CUDA:0 (NVIDIA GeForce RTX 3060, 12288MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3260989 parameters, 0 gradients, 12.0 GFLOPs
+
+0: 640x640 1 Front bumper, 1 Front fender(L), 1 Bonnet, 1 Head lights(L), 3 Damages, 26.0ms
+Speed: 1.4ms pre-process, 26.0ms inference, 5.2ms postprocess per image at shape (1, 3, 640, 640)
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+/home/shbin/anaconda3/envs/cuda/lib/python3.8/site-packages/sklearn/base.py:420: UserWarning: X does not have valid feature names, but OneHotEncoder was fitted with feature names
+  warnings.warn(
+127.0.0.1 - - [30/May/2023 05:28:11] "POST /api/main HTTP/1.1" 200 -
+Damaged Parts: FrontBumper, FrontFender(L), Bonnet
+
+Detecting damage in FrontBumper...
+
+Breakage: 6.4% area
+Breakage confidence score: 57.4%
+
+Crushed: Damage is not detected
+
+Scratched: Damage is not detected
+
+Separated: 6.4% area
+Separated confidence score: 55.6%
+
+FrontBumper repair method is replace
+FrontBumper repair cost is 205000 won
+
+----------------------------------------
+
+Detecting damage in FrontFender(L)...
+
+Breakage: 0.2% area
+Breakage confidence score: 68.8%
+
+Crushed: 0.2% area
+Crushed confidence score: 51.8%
+
+Scratched: 0.2% area
+Scratched confidence score: 76.8%
+
+Separated: 0.2% area
+Separated confidence score: 63.3%
+
+FrontFender(L) repair method is replace
+FrontFender(L) repair cost is 352000 won
+
+----------------------------------------
+
+Detecting damage in Bonnet...
+
+Breakage: 17.6% area
+Breakage confidence score: 70.0%
+
+Crushed: 17.6% area
+Crushed confidence score: 58.7%
+
+Scratched: 17.6% area
+Scratched confidence score: 75.0%
+
+Separated: 17.6% area
+Separated confidence score: 63.7%
+
+Bonnet repair method is replace
+Bonnet repair cost is 349000 won
+
+----------------------------------------
