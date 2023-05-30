@@ -173,7 +173,7 @@ class Report : AppCompatActivity() {
         }
 
         val json = Gson().toJson(Req(imgString, carYear, company))
-        val url = "http://10.0.2.2:8000"
+        val url = "http://52.78.150.62:8000"
         val request = Request.Builder()
             .url("$url/api/main")
             .post(json.toString().toRequestBody("application/json; charset=utf-8".toMediaType()))
