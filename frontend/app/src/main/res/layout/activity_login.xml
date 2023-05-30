@@ -7,8 +7,17 @@
     android:background="@color/black"
     tools:context=".Login">
 
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewTitle"/>
+
     <TextView
-        android:id="@+id/textTitle"
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Service Car AI"
@@ -16,7 +25,7 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +43,7 @@
         app:backgroundTint="@drawable/edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
 
     <EditText
         android:id="@+id/editTextPwd"

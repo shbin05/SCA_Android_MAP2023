@@ -16,6 +16,7 @@ import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.io.InputStream
 import android.util.Base64
+import android.widget.TextView
 import com.google.gson.Gson
 import okhttp3.Call
 import okhttp3.Callback
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var imgBitmap: Bitmap
     lateinit var imgString: String
 
+    lateinit var textViewTitle: TextView
+    lateinit var textViewTitle2: TextView
     lateinit var imageViewCar: ImageView
     lateinit var button1: Button
     lateinit var button2: Button
@@ -70,6 +73,9 @@ class MainActivity : AppCompatActivity() {
         if(username==null){
             username = intent.getStringExtra(MyInfo.USERNAME)
         }
+        if(username==null){
+            username = intent.getStringExtra(Report.USERNAME)
+        }
 
         val buttonProfile = findViewById<ImageButton>(R.id.buttonProfile)
         buttonProfile.setOnClickListener {
@@ -78,6 +84,12 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intent)
         }
+
+        textViewTitle = findViewById(R.id.textViewTitle)
+        textViewTitle.visibility = TextView.VISIBLE
+
+        textViewTitle2 = findViewById(R.id.textViewTitle2)
+        textViewTitle2.visibility = TextView.VISIBLE
 
         imageViewCar = findViewById(R.id.imageViewCar)
         imageViewCar.visibility = ImageView.INVISIBLE
@@ -92,6 +104,9 @@ class MainActivity : AppCompatActivity() {
         button2.text = "사진 촬영하기"
     }
     fun initialize() {
+        textViewTitle.visibility = TextView.VISIBLE
+        textViewTitle2.visibility = TextView.VISIBLE
+
         imageViewCar = findViewById(R.id.imageViewCar)
         imageViewCar.visibility = ImageView.INVISIBLE
 
@@ -110,6 +125,9 @@ class MainActivity : AppCompatActivity() {
             val imgUri: Uri? = data.data
             imgBitmap = imgUri?.let { getBitmap(it) }!!
             ImageHolder.imgBitmap = imgBitmap
+
+            textViewTitle.visibility = TextView.INVISIBLE
+            textViewTitle2.visibility = TextView.INVISIBLE
 
             imageViewCar.visibility = ImageView.VISIBLE
             imageViewCar.setImageBitmap(imgBitmap)

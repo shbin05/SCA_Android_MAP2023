@@ -7,14 +7,32 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/service"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Service Car AI"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/textViewTitle2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/textView"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="SCA"
+        android:textColor="@color/purple_500"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView" />
 
     <TextView
         android:id="@+id/textView"

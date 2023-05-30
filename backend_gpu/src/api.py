@@ -207,8 +207,8 @@ def img_to_s3(img, filename):
     try:
         s3.upload_fileobj(img_buffer, bucket_name, filename)
         print("Upload Successful")
-        url = f"https://{bucket_name}.s3.amazonaws.com/{filename}"
-        return url
+        presigned_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': filename}, ExpiresIn=3600)
+        return presigned_url
     except FileNotFoundError:
         print("The file was not found")
         return None
@@ -228,8 +228,8 @@ def skimage_to_s3(img, filename):
     try:
         s3.upload_fileobj(img_buffer, bucket_name, filename)
         print("Upload Successful")
-        url = f"https://{bucket_name}.s3.amazonaws.com/{filename}"
-        return url
+        presigned_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': filename}, ExpiresIn=3600)
+        return presigned_url
     except FileNotFoundError:
         print("The file was not found")
         return None
